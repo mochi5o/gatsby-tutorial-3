@@ -7,6 +7,8 @@
 module.exports = {
   siteMetadata: {
     title: `Pandas Eating Lots`,
+    description: `A simple description about pandas eating lots...`,
+    author: `gatsbyjs`,
   },
   plugins: [
     {
@@ -28,14 +30,15 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    `gatsby-plugin-offline`,
-    `gatsby-transformer-remark`,
-    `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    `gatsby-plugin-offline`,
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-emotion`,
   ],
 }
